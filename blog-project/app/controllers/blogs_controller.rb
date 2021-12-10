@@ -10,6 +10,12 @@ class BlogsController < ApplicationController
   def show
   end
 
+  def update_status
+    @blog = Blog.find(params[:id])
+    @blog.update(status: params[:status])
+    redirect_to @blog
+  end
+  
   # GET /blogs/new
   def new
     @blog = Blog.new
@@ -36,6 +42,7 @@ class BlogsController < ApplicationController
 
   # PATCH/PUT /blogs/1 or /blogs/1.json
   def update
+      
     respond_to do |format|
       if @blog.update(blog_params)
         format.html { redirect_to @blog, notice: "Blog was successfully updated." }

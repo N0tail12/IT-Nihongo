@@ -17,19 +17,15 @@
 
   <tbody>
     <% @blogs.each do |blog| %>
-    <% if blog.status == 1 %>
       <tr>
         <td><%= blog.content %></td>
         <td><%= blog.userID %></td>
         <td><%= blog.conmmentID %></td>
         <td><%= blog.time %></td>
-        <td><%= blog.status %></td>
         <td><%= blog.id %></td>
         <td><%= link_to 'Show', blog %></td>
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Delete',  method: :update, data: {id: blog.id, status: 1}  %></td>
       </tr>
-      <% end %>
     <% end %>
   </tbody>
 </table>

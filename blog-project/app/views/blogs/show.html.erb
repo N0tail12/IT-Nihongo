@@ -25,5 +25,6 @@
   <%= @blog.status %>
 </p>
 
+<%= link_to 'Hide', update_status_blog_path(@blog, status: 0), method: :patch %>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
