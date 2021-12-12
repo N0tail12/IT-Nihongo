@@ -10,6 +10,15 @@
   </head>
 
   <body>
+     <%= link_to "home", "/" %>
+    <% if user_signed_in? %>
+      <%= link_to "logout", destroy_user_session_path, method: :delete %>
+      <p>Hello <%= current_user.email %></p>
+    <% else %>
+      <%= link_to "signin", new_user_session_path %>
+      <%= link_to "signup", new_user_registration_path %>
+    <% end %>
     <%= yield %>
+    <%= link_to "My BLog", blogs_path %>
   </body>
 </html>

@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!
   # GET /blogs or /blogs.json
   def index
     @blogs = Blog.all
@@ -9,12 +9,19 @@ class BlogsController < ApplicationController
   # GET /blogs/1 or /blogs/1.json
   def show
   end
-
+    
   # GET /blogs/new
   def new
     @blog = Blog.new
   end
 
+  # Update
+  def update_status
+    @blog = Blog.find(params[:id])
+    puts params[:status]
+    @blog.update(status: params[:status])
+    redirect_to @blog
+  end
   # GET /blogs/1/edit
   def edit
   end

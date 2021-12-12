@@ -5,25 +5,10 @@
   <%= @blog.content %>
 </p>
 
-<p>
-  <strong>Userid:</strong>
-  <%= @blog.userID %>
-</p>
-
-<p>
-  <strong>Conmmentid:</strong>
-  <%= @blog.conmmentID %>
-</p>
-
-<p>
-  <strong>Time:</strong>
-  <%= @blog.time %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @blog.status %>
-</p>
-
+<% if @blog.status == 1 %>
+<%= link_to 'Hide', update_status_blog_path(@blog, status: 0), method: :patch %>
+<% else %>
+<%= link_to 'Show', update_status_blog_path(@blog, status: 1), method: :patch %>
+<% end %>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
