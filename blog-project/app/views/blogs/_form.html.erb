@@ -17,23 +17,16 @@
   </div>
 
   <div class="field">
-    <%= form.label :userID %>
-    <%= form.number_field :userID %>
+    <%= form.hidden_field :userID, :value => current_user.id  %>
+  </div>
+
+
+  <div class="field">
+    <%= form.hidden_field :time, :value => Date.today %>
   </div>
 
   <div class="field">
-    <%= form.label :conmmentID %>
-    <%= form.number_field :conmmentID %>
-  </div>
-
-  <div class="field">
-    <%= form.label :time %>
-    <%= form.text_field :time %>
-  </div>
-
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.number_field :status %>
+    <%= form.hidden_field :status, :value => 1 %>
   </div>
 
   <div class="actions">
