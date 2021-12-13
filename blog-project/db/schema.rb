@@ -10,17 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2021_12_13_133334) do
-
-  create_table "blog_comments", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "blog_id"
-    t.text "comment"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
+ActiveRecord::Schema.define(version: 2021_12_13_083855) do
 
   create_table "blogs", force: :cascade do |t|
     t.text "content"

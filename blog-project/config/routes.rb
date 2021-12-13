@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :blog_comments
   get 'static_pages/home'
   devise_for :users
   resources :comments
