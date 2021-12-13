@@ -1,5 +1,7 @@
-<p id="notice"><%= notice %></p>
-
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <p id="notice"><%= notice %></p>
+</div>
 <p>
   <strong>User:</strong>
   <%= @blog_comment.user_id %>
