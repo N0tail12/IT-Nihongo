@@ -6,7 +6,7 @@
 <table>
   <thead>
     <tr>
-      <th>Content</th>
+      <th>Title</th>
       <th>Userid</th>
       <th>Time</th>
       <th>Status</th>
@@ -18,7 +18,7 @@
     <% @blogs.each do |blog| %>
     <%if blog.status == 1 %>
       <tr>
-        <td><%= blog.content %></td>
+        <td><%= blog.title %></td>
         <td><%= blog.userID %></td>
         <td><%= blog.time %></td>
         <td><%= blog.status %></td>
@@ -36,7 +36,7 @@
 <table>
   <thead>
     <tr>
-      <th>Content</th>
+      <th>Tiltle</th>
       <th>Userid</th>
       <th>Time</th>
       <th>Status</th>
@@ -48,7 +48,7 @@
     <% @blogs.each do |blog| %>
     <%if blog.status == 0 %>
       <tr>
-        <td><%= blog.content %></td>
+        <td><%= blog.title %></td>
         <td><%= blog.userID %></td>
         <td><%= blog.time %></td>
         <td><%= blog.status %></td>
