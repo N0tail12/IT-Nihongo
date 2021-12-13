@@ -20,7 +20,7 @@ nav{
     margin-bottom: 50px;
 }
 .centerApp{
-    width: 50%;
+    width: 45%;
     margin: auto;
 }
 .centerApp h2, .centerApp h1{
@@ -63,6 +63,9 @@ input {
   width: 100%;
 }
 
+input[type=checkbox] {
+    width: unset;
+}
 input[type=text] {
   width: 100%;
   padding: 12px 20px;
