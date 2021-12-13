@@ -13,3 +13,90 @@
  *= require_tree .
  *= require_self
  */
+body, html{
+    font-size:16px;
+}
+nav{
+    margin-bottom: 50px;
+}
+.centerApp{
+    width: 50%;
+    margin: auto;
+}
+.centerApp h2, .centerApp h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.centerApp2{
+    width: 80%;
+    margin: auto;
+}
+.centerApp2 h2, .centerApp2 h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: hotpink;
+  background-color: transparent;
+}
+
+a:active {
+  color: black;
+}
+
+table, th, td{
+    border-color: blue;
+}
+
+
+input {
+  width: 100%;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+  background-color: #3CBC8D;
+  color: white;
+  /* background-color: white; */
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  /* padding-left: 40px; */
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}

@@ -7,18 +7,25 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
   </head>
 
-  <body>
-     <%= link_to "home", "/" %>
-    <% if user_signed_in? %>
-      <%= link_to "logout", destroy_user_session_path, method: :delete %>
-      <p>Hello <%= current_user.id %></p>
+  <body class="container">
+      
+      <nav class="navbar navbar-light bg-light">
+  <%= link_to "Home", "/", class: 'navbar-brand' %>
+  
+
+  
+  <% if user_signed_in? %>
+      <p style="font-size:18px"><%= current_user.email %> <span style="margin-left:50px"><%= link_to "Log out", destroy_user_session_path, method: :delete %></span></p>
     <% else %>
-      <%= link_to "signin", new_user_session_path %>
-      <%= link_to "signup", new_user_registration_path %>
+      <%= link_to "Sign In", new_user_session_path %>
     <% end %>
+</nav>
     <%= yield %>
-    <%= link_to "My BLog", blogs_path %>
   </body>
 </html>
