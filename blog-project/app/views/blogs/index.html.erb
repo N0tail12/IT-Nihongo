@@ -1,9 +1,11 @@
+<div class="centerApp2">
+
 <p id="notice"><%= notice %></p>
 
 <h1>Blogs</h1>
 
 <h2>Availble Blogs</h2>
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Content</th>
@@ -32,8 +34,10 @@
 </table>
 
 <br>
+<%= link_to 'New Blog', new_blog_path %>
+<br><hr><br>
  <h2>Hided Blogs</h2>
-<table>
+<table  class="table table-bordered">
   <thead>
     <tr>
       <th>Content</th>
@@ -60,4 +64,5 @@
   </tbody>
   <br>
 </table>
-<%= link_to 'New Blog', new_blog_path %>
+
+</div>
