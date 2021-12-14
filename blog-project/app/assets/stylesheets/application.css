@@ -86,7 +86,7 @@ input[type=button], input[type=submit], input[type=reset] {
   background-color: #4CAF50;
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 10px 20px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
@@ -142,4 +142,25 @@ textarea {
 /* When moving the mouse over the close button */
 .closebtn:hover {
   color: black;
+}
+
+.profileCard{
+    width: 250px;
+    background-color: #efefef;
+    border:2px solid #4EB7F8;
+    padding: 20px ;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.avatar{
+    width: 90%;
+    margin:auto;
+    margin-bottom: 20px;
+    
+}
+.avatar img{
+    width: 100%;
+    display: block; margin-left: auto; margin-right: auto;
 }
