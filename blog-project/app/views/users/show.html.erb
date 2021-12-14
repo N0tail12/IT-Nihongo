@@ -3,7 +3,7 @@
 <h3>Name</h3>
 <%= @user.name %>
 
-<p>
+<p class="avatar">
   <% if @user.avatar.attached? %>
     <%= image_tag @user.avatar %>
   <% end %>
@@ -11,3 +11,5 @@
 
 <h3>Email</h3>
 <%= @user.email %>
+
+

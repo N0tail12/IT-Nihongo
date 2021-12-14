@@ -16,14 +16,3 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-// window.onload = function(){
-//     var empt = document.getElementById('notice');
-//   if ( empt == null || empt.value == "") {
-//     document.getElementsByClassName("alert").style.BackgroundColor = "transparent!important";
-//     return false;
-//   } else {
-//     document.getElementsByClassName("alert").style.BackgroundColor = "#51B987";
-    
-//     return true;
-//   }
-// }
