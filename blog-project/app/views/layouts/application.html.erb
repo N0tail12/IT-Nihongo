@@ -21,7 +21,8 @@
 
   
   <% if user_signed_in? %>
-      <p style="font-size:18px"><%= current_user.email %> <span style="margin-left:50px"><%= link_to "Log out", destroy_user_session_path, method: :delete %></span></p>
+      <p style="font-size:18px"><%= link_to current_user.email, users_show_path %> 
+      <span style="margin-left:50px"><%= link_to "Log out", destroy_user_session_path, method: :delete %></span></p>
     <% else %>
       <%= link_to "Sign In", new_user_session_path %>
     <% end %>
