@@ -1,7 +1,10 @@
-<div class="alert">
+
+
+<div class="alert" id="alert-title">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
   <p id="notice"><%= notice %></p>
 </div>
+
 <p>
   <strong>User:</strong>
   <%= @blog_comment.user_id %>
@@ -19,3 +22,13 @@
 
 <%= link_to 'Edit', edit_blog_comment_path(@blog_comment) %> |
 <%= link_to 'Back', blog_comments_path %>
+
+<script> 
+    var empt = document.getElementById('notice').innerText;
+  if ( empt == null || empt == "") {
+    document.getElementById("alert-title").style.display = "none";
+  } else {
+    document.getElementById("alert-title").style.background = "#51B987";
+  }
+
+</script>
