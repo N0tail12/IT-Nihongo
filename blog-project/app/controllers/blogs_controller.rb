@@ -4,11 +4,13 @@ class BlogsController < ApplicationController
   # GET /blogs or /blogs.json
   def index
     @blogs = Blog.all
+    @currentUserId = current_user.id
   end
 
   # GET /blogs/1 or /blogs/1.json
   def show
       @blog_comment = BlogComment.new
+      @currentUserId = current_user.id
   end
     
   # GET /blogs/new
@@ -21,7 +23,8 @@ class BlogsController < ApplicationController
     @blog = Blog.find(params[:id])
     puts params[:status]
     @blog.update(status: params[:status])
-    redirect_to @blog
+    redirect_to "/blogs"
+    
   end
   # GET /blogs/1/edit
   def edit
@@ -57,6 +60,7 @@ class BlogsController < ApplicationController
 
   # DELETE /blogs/1 or /blogs/1.json
   def destroy
+      @currentUserId = current_user.id
     @blog.destroy
     respond_to do |format|
       format.html { redirect_to blogs_url, notice: "Blog was successfully destroyed." }

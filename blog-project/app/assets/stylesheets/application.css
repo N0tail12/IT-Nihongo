@@ -23,7 +23,7 @@ nav{
     width: 45%;
     margin: auto;
 }
-.centerApp h2, .centerApp h1{
+.centerApp h2, .centerApp h1, .centerApp2 h4 {
     text-align: center;
     margin-bottom: 50px;
 }
@@ -66,15 +66,15 @@ input {
 input[type=checkbox] {
     width: unset;
 }
-input[type=text] {
+input[type=text], input[type=email], input[type=password], input[type=number] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border: 2px solid red;
   border-radius: 4px;
-  background-color: #3CBC8D;
-  color: white;
+  background-color: #F8F8F8;
+  /* color: white; */
   /* background-color: white; */
   background-image: url('searchicon.png');
   background-position: 10px 10px;
@@ -102,4 +102,44 @@ textarea {
   border-radius: 4px;
   background-color: #f8f8f8;
   resize: none;
+}
+
+.borderContent{
+    border: 1px solid #439862;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.rightContent{
+    text-align: right;
+}
+
+#notice{
+    color: white!important;
+    font-size: 18px;
+    margin: 0;
+}
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #51B987; 
+  color: white!important;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
 }
