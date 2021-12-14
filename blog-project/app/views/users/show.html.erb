@@ -23,7 +23,7 @@
   <thead>
     <tr>
       <th>Title</th>
-   >
+       <th>User Id </th>
       <th>Time</th>
       <th colspan="3"></th>
     </tr>
@@ -31,34 +31,21 @@
 
   <tbody>
     <% @blogs.each do |blog| %>
-    <%if blog.status == 1 %>
+    <% if blog.status == 1 %>
     <% if blog.userID == @currentUserId %>
       <tr>
         <td><%= blog.title %></td>
-       
+          <td><%= blog.userID %></td>
         <td><%= blog.time %></td>
-       
         
-        
-         <% if blog.userID == @currentUserId %>
-             <td><%= link_to 'Show', blog %></td>
-            <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-            <td>
-            <% if blog.status == 1 %>
-            <%= link_to 'Hide', update_status_blog_path(blog, status: 0), method: :patch %>
-            <% else %>
-            <%= link_to 'Appear', update_status_blog_path(blog, status: 1), method: :patch %>
-            <% end %>
-        </td>
-        <% else %>
-            <td colspan="3"><%= link_to 'Show', blog %></td>
-        <% end %>
+        <td colspan="3"><%= link_to 'Show', blog %></td>
         
          
       </tr>
       <% end %>
+      <% end %>
     <% end %>
-    <% end %>
+   
   </tbody>
   
 </table>
